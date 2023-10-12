@@ -19,7 +19,7 @@ if %errorlevel% equ 0 (
 )
 
 
-set /a s=30
+set /a s=15
 echo:
 echo:
 echo wait %s% second
