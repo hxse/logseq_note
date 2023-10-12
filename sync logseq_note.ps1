@@ -46,6 +46,7 @@ if ($auto) {
     while ($true) {
         Get-Date
         Start-GitAutoCommitAndPush
+        echo "sleep..." $sleep
         Start-Sleep -Seconds $sleep
     }
 }
