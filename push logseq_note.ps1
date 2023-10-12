@@ -27,7 +27,6 @@ if ($?) {
 		echo "---- yes need pull"
 		echo $output
 		git commit -m "auto update"
-		git push
 		
 		git pull --no-rebase
 		git add .
