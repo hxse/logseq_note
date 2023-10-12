@@ -17,5 +17,6 @@ if ($?) {
 } else {
 	echo "---- yes need push"
     git commit -m "auto update"
+    git pull --no-rebase
     git push
 }
