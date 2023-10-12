@@ -9,18 +9,22 @@ func() {
     exit -1
 }
  
-upload="false"
- 
-while getopts 'h:j:m:u' OPT; do
+dir=./
+auto=$false
+sleep=10
+
+while getopts 'd:a:s' OPT; do
     case $OPT in
-        j) S_DIR="$OPTARG";;
-        m) D_DIR="$OPTARG";;
-        u) upload="true";;
+        d) dir="$OPTARG";;
+        a) auto="$OPTARG";;
+        s) sleep="true";;
         h) func;;
         ?) func;;
     esac
 done
  
-echo $S_DIR
-echo $D_DIR
-echo $upload
+echo $dir
+echo $auto
+echo $sleep
+
+

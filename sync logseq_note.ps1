@@ -12,7 +12,7 @@ cd $dir
 $token=$env:note_github_token
 git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
 
-function Start-GitAutoCommitAndPush {
+function syncGit {
 	$output = git pull --no-rebase
 	echo "---- check remote"
 
@@ -50,7 +50,7 @@ if ($auto) {
         echo ""
         Get-Date
         echo ""
-        Start-GitAutoCommitAndPush
+        syncGit
         echo ""
         echo "sleep..." $sleep
         Start-Sleep -Seconds $sleep
@@ -60,5 +60,5 @@ else {
     echo ""
     Get-Date
     echo ""
-    Start-GitAutoCommitAndPush
+    syncGit
 }
