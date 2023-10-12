@@ -46,6 +46,7 @@ if ($auto) {
     while ($true) {
         echo ""
         Get-Date
+        echo ""
         Start-GitAutoCommitAndPush
         echo ""
         echo "sleep..." $sleep
@@ -55,5 +56,6 @@ if ($auto) {
 else {
     echo ""
     Get-Date
+    echo ""
     Start-GitAutoCommitAndPush
 }
