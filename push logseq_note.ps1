@@ -7,6 +7,13 @@ git add .
 git diff-index --quiet HEAD --
 if ($?) {
 	echo "---- no need push"
+	
+    if($output.Contains("Already up to date.")){
+        echo "---- no need pull"
+	}
+	else{
+		echo "---- yes need pull"
+	}
 } else {
 	echo "---- yes need push"
     
