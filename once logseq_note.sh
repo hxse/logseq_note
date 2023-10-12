@@ -20,8 +20,6 @@ while getopts 'd:a:s' OPT; do
         d) dir="$OPTARG";;
         a) auto="$OPTARG";;
         s) sleepTime="$OPTARG";;
-        h) func;;
-        ?) func;;
     esac
 done
 
