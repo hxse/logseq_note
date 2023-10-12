@@ -25,11 +25,12 @@ while getopts 'd:a:s' OPT; do
     esac
 done
 
+echo "args" $sleepTime 
+echo "args" $auto
+
 token=$note_github_token
 git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
 
-echo "args" $sleepTime 
-echo "args" $auto
 
 syncGit()
 {
