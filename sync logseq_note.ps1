@@ -6,7 +6,7 @@ param (
     [Alias("s")]
     [int] $sleep = 10
 )
-
+echo $auto
 cd $dir
 
 $token=$env:note_github_token
