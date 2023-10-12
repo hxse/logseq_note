@@ -2,6 +2,7 @@
 git remote set-url origin https://hxse:%note_github_token%@github.com/hxse/logseq_note.git
 
 $output = git pull --no-rebase
+echo $output
 if($output.Contains("Already up to date.")){
     echo "---- no need pull"
 }
