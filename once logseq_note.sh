@@ -15,15 +15,6 @@ dir=./
 auto=false
 sleepTime=10
 
-while getopts 'd:a:s' OPT; do
-    case $OPT in
-        d) dir="$OPTARG";;
-        a) auto="$OPTARG";;
-        s) sleepTime="$OPTARG";;
-        h) func;;
-        ?) func;;
-    esac
-done
 
 token=$note_github_token
 git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
