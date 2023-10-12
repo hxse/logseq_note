@@ -15,7 +15,7 @@ dir=./
 auto=false
 sleepTime=10
 
-while getopts 'd:a:s' OPT; do
+while getopts 'd:a:s:h' OPT; do
     case $OPT in
         d) dir="$OPTARG";;
         a) auto="$OPTARG";;

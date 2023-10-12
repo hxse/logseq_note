@@ -24,5 +24,6 @@ while getopts 'd:a:s' OPT; do
     esac
 done
 
-echo "args" $sleepTime 
+echo "args" $dir
 echo "args" $auto
+echo "args" $sleepTime 
