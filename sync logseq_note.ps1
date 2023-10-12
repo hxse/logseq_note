@@ -26,7 +26,6 @@ function syncGit {
 			echo "---- pull"
 		}
 	} else {
-		
 		if($output.Contains("Already up to date.")){
 			echo "---- push"
 			git commit -m "auto update"
@@ -47,7 +46,7 @@ function syncGit {
 
 if ($auto) {
     while ($true) {
-        echo ""
+		echo "auto run"
         Get-Date
         echo ""
         syncGit
@@ -57,7 +56,7 @@ if ($auto) {
     }
 }
 else {
-    echo ""
+    echo "once run"
     Get-Date
     echo ""
     syncGit

@@ -10,7 +10,7 @@ func() {
     echo "D_DIR,the path of destination."
     exit -1
 }
- 
+
 dir=./
 auto=$false
 sleep=10
@@ -25,34 +25,59 @@ while getopts 'd:a:s' OPT; do
     esac
 done
 
+token=$note_github_token
+git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
+
 syncGit()
 {
     output=$(git pull --no-rebase)
-    echo "$output"
 	echo "---- check remote"
 
 	git add .
 	git diff-index --quiet HEAD --
 	if [[ $? == 1 ]]
 	then
-		echo "有变动"
+		if [[ $output =~ "Already up to date." ]]
+		then
+			echo "---- nothing"
+		else
+			echo "---- pull"
+		fi
 	else
-		echo "无变动"
-	fi
-	
-	if [[ $output =~ "Already up to date." ]]
-	then
-		echo "包含"
-	else
-		echo "不包含"
+		if [[ $output =~ "Already up to date." ]]
+		then
+			echo "---- push"
+			git commit -m "auto update"
+			git push
+		else
+			echo "---- merge"
+			echo $output
+			git commit -m "auto update"
+
+			git pull --no-rebase
+			git add .
+			git commit -m "auto merge"
+			git push
+		fi
 	fi
 }
 
 
 if [[ $auto != $false ]]
 then
-	echo "auto..."
+	while :
+	do
+		echo "auto run"
+		date
+        echo ""
+		syncGit
+        echo ""
+        echo "sleep..." $sleep
+		sleep $sleep
+	done
 else
-	echo "once..."
+    echo "once run"
+    date
+    echo ""
 	syncGit
 fi
