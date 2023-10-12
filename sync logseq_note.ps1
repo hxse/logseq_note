@@ -3,7 +3,9 @@ param (
     [switch] $auto = $false,
     [int] $sleep = 10
 )
-
+echo $dir
+echo $auto
+echo $sleep
 cd $dir
 
 $token=$env:note_github_token
