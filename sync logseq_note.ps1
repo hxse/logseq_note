@@ -1,6 +1,6 @@
 param (
     [string] $dir = $PSScriptRoot,
-    [switch] $auto = $false,
+    [bool] $auto = $false,
     [int] $sleep = 10
 )
 echo $dir
