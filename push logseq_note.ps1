@@ -2,7 +2,8 @@ $token=$env:note_github_token
 git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
 
 $output = git pull --no-rebase
-    
+echo "---- check remote"
+
 git add .
 git diff-index --quiet HEAD --
 if ($?) {
