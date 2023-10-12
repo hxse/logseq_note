@@ -13,7 +13,7 @@ func() {
 
 dir=./
 auto=false
-sleep=10
+sleepTime=10
 
 while getopts 'd:a:s' OPT; do
     case $OPT in
