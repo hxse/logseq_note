@@ -1,3 +1,3 @@
 cd %~dp0
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './sync logseq_note.ps1' -dir '%~dp0' -auto 1 -sleep 10"
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './sync logseq_note.ps1' -d '%~dp0' -a 1 -s 10"
 pause
