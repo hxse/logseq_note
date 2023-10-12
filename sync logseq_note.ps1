@@ -1,6 +1,9 @@
 param (
+    [Alias("d")]
     [string] $dir = $PSScriptRoot,
+    [Alias("a")]
     [bool] $auto = $false,
+    [Alias("s")]
     [int] $sleep = 10
 )
 
