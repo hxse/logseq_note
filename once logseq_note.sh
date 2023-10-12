@@ -13,13 +13,13 @@ func() {
 
 dir=./
 auto=false
-sleep=10
+sleepTime=10
 
 while getopts 'd:a:s' OPT; do
     case $OPT in
         d) dir="$OPTARG";;
         a) auto="$OPTARG";;
-        s) sleep="$OPTARG";;
+        s) sleepTime="$OPTARG";;
         h) func;;
         ?) func;;
     esac
@@ -72,8 +72,8 @@ then
         echo ""
 		syncGit
         echo ""
-        echo "sleep..." $sleep
-		sleep $sleep
+        echo "sleep..." $sleepTime
+		sleep $sleepTime
 	done
 else
     echo "once run"
