@@ -12,14 +12,14 @@ func() {
 }
 
 dir=./
-auto=$false
+auto=false
 sleep=10
 
 while getopts 'd:a:s' OPT; do
     case $OPT in
         d) dir="$OPTARG";;
         a) auto="$OPTARG";;
-        s) sleep="true";;
+        s) sleep="$OPTARG";;
         h) func;;
         ?) func;;
     esac
@@ -35,7 +35,7 @@ syncGit()
 
 	git add .
 	git diff-index --quiet HEAD --
-	if [[ $? == 1 ]]
+	if [ $? -eq 1 ]
 	then
 		if [[ $output =~ "Already up to date." ]]
 		then
@@ -63,7 +63,7 @@ syncGit()
 }
 
 
-if [[ $auto != $false ]]
+if [ "$auto" != false ]
 then
 	while :
 	do
