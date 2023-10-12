@@ -1,4 +1,10 @@
-cd $PSScriptRoot 
+param (
+    [string] $Dir = $PSScriptRoot,
+    [int] $sleep = 10,
+    [switch] $auto = $false
+)
+
+cd $Dir
 
 $token=$env:note_github_token
 git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
