@@ -40,6 +40,7 @@ syncGit()
 	fi
 }
 
+
 if [[ $auto != $false ]]
 then
 	echo "auto..."
