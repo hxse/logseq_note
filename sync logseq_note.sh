@@ -1,5 +1,7 @@
 #!/bin/bash
- 
+
+export LANG="en_US.UTF-8"
+
 func() {
     echo "Usage:"
     echo "test.sh [-j S_DIR] [-m D_DIR]"
@@ -22,9 +24,22 @@ while getopts 'd:a:s' OPT; do
         ?) func;;
     esac
 done
- 
+
 echo $dir
 echo $auto
 echo $sleep
 
-
+syncGit()
+{
+    output=$(git pull --no-rebase)
+    echo "$output"
+    
+	if [[ $output == "*Already up to date.*" ]]
+	then
+		echo "包含"
+	else
+		echo "不包含"
+	fi
+    
+}
+syncGit
