@@ -1,7 +1,7 @@
 param (
     [string] $dir = $PSScriptRoot,
-    [int] $sleep = 10,
-    [switch] $auto = $false
+    [switch] $auto = $false,
+    [int] $sleep = 10
 )
 
 cd $dir
