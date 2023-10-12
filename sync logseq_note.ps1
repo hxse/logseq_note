@@ -4,6 +4,7 @@ param (
     [switch] $auto = $false
 )
 
+echo $dir
 cd $dir
 
 $token=$env:note_github_token
