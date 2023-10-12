@@ -72,7 +72,7 @@ then
         echo ""
 		syncGit
         echo ""
-        echo "sleep..." $sleepTime
+        echo "sleep...${sleepTime}"
 		sleep 5
 	done
 else
