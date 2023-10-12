@@ -1,2 +1,2 @@
 # logseq_note
- * test10
+ * test2
