@@ -66,7 +66,7 @@ syncGit()
 }
 
 
-if [ "$auto" != false ]
+if [ $auto != false ]
 then
 	while :
 	do
