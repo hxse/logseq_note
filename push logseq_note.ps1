@@ -7,21 +7,20 @@ git add .
 git diff-index --quiet HEAD --
 if ($?) {
     if($output.Contains("Already up to date.")){
-        echo "---- nothing to do"
+        echo "---- nothing"
 	}
 	else{
-		echo "---- only pull"
+		echo "---- pull"
 	}
 } else {
-	echo "---- yes need push"
     
     if($output.Contains("Already up to date.")){
-        echo "---- no need merge"
+        echo "---- push"
         git commit -m "auto update"
 		git push
 	}
 	else{
-		echo "---- yes need merge"
+		echo "---- merge"
 		echo $output
 		git commit -m "auto update"
 
