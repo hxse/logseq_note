@@ -29,6 +29,7 @@ if ($?) {
 		git commit -m "auto update"
 		git push
 		
+		git pull --no-rebase
 		git add .
 		git commit -m "auto merge"
 		git push
