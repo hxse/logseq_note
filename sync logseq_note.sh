@@ -25,21 +25,25 @@ while getopts 'd:a:s' OPT; do
     esac
 done
 
-echo $dir
-echo $auto
-echo $sleep
-
 syncGit()
 {
     output=$(git pull --no-rebase)
     echo "$output"
-    
+	echo "---- check remote"
+
+
 	if [[ $output =~ "Already up to date." ]]
 	then
 		echo "包含"
 	else
 		echo "不包含"
 	fi
-    
 }
-syncGit
+
+if [[ $auto != $false ]]
+then
+	echo "auto..."
+else
+	echo "once..."
+	syncGit
+fi
