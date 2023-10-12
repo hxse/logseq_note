@@ -73,7 +73,7 @@ then
 		syncGit
         echo ""
         echo "sleep..." $sleep
-		sleep "${sleep}s"
+		sleep $sleep
 	done
 else
     echo "once run"
