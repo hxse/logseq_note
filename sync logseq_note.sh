@@ -31,7 +31,15 @@ syncGit()
     echo "$output"
 	echo "---- check remote"
 
-
+	git add .
+	git diff-index --quiet HEAD --
+	if [[ $? == 1 ]]
+	then
+		echo "有变动"
+	else
+		echo "无变动"
+	fi
+	
 	if [[ $output =~ "Already up to date." ]]
 	then
 		echo "包含"
