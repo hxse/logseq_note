@@ -76,7 +76,6 @@ then
         echo ""
 		syncGit
         echo ""
-        sleepTime=5
         echo "sleep..." $sleepTime
 		sleep $sleepTime
 	done
