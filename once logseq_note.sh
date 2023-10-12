@@ -12,13 +12,13 @@ func() {
 }
 
 dir=./
-auto=false
+auto="false"
 sleepTime=10
 
 while getopts 'd:a:s' OPT; do
     case $OPT in
         d) dir="$OPTARG";;
-        a) auto=true;;
+        a) auto="true";;
         s) sleepTime="$OPTARG";;
         h) func;;
         ?) func;;
