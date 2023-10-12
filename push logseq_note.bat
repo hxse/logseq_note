@@ -3,6 +3,10 @@ cd %~dp0
 @echo off
 :loop
 
+git remote set-url origin https://hxse:%note_github_token%@github.com/hxse/logseq_note.git
+
+git pull --no-rebase
+
 git add .
 git diff-index --quiet HEAD --
 
@@ -11,7 +15,6 @@ if %errorlevel% equ 0 (
 ) else (
     echo check different
     git commit -m "auto update"
-    git remote set-url origin https://hxse:%note_github_token%@github.com/hxse/logseq_note.git
     git push
 )
 
