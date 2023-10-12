@@ -27,7 +27,7 @@ done
 
 token=$note_github_token
 git remote set-url origin https://hxse:$token@github.com/hxse/logseq_note.git
-
+echo $sleepTime sleep
 syncGit()
 {
     output=$(git pull --no-rebase)
