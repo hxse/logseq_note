@@ -44,6 +44,7 @@ function Start-GitAutoCommitAndPush {
 
 if ($auto) {
     while ($true) {
+        echo ""
         Get-Date
         Start-GitAutoCommitAndPush
         echo "sleep..." $sleep
@@ -51,6 +52,7 @@ if ($auto) {
     }
 }
 else {
+    echo ""
     Get-Date
     Start-GitAutoCommitAndPush
 }
