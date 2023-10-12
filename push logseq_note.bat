@@ -13,6 +13,7 @@ if %errorlevel% equ 0 (
 ) else (
     echo check different
     git commit -m "auto update"
+    git pull --no-rebase
     git push
 )
 
