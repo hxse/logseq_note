@@ -5,6 +5,7 @@ param (
 )
 
 echo $dir
+echo $sleep
 cd $dir
 
 $token=$env:note_github_token
