@@ -35,7 +35,7 @@ syncGit()
 
 	git add .
 	git diff-index --quiet HEAD --
-	if [ $? -eq 1 ]
+	if [ $? -eq 0 ]
 	then
 		if [[ $output =~ "Already up to date." ]]
 		then
