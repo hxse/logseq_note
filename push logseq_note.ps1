@@ -8,6 +8,7 @@ if($output.Contains("Already up to date.")){
 }
 else{
     echo "---- yes need pull"
+    echo $output
 }
     
 git add .
