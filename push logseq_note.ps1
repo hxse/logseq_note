@@ -26,6 +26,7 @@ if ($?) {
 	else{
 		echo "---- yes need pull"
 		echo $output
+		git push
 		git pull --no-rebase
 		git add .
 		git commit -m "auto merge"
