@@ -4,7 +4,7 @@ cd %~dp0
 :loop
 
 git remote set-url origin https://hxse:%note_github_token%@github.com/hxse/logseq_note.git
-git remote update
+git pull --no-rebase
 git add .
 git diff-index --quiet HEAD --
 
