@@ -34,7 +34,7 @@ syncGit()
     output=$(git pull --no-rebase)
     echo "$output"
     
-	if [[ $output == "*Already up to date.*" ]]
+	if [[ $output =~ "Already up to date." ]]
 	then
 		echo "包含"
 	else
