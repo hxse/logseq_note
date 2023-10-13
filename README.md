@@ -15,5 +15,6 @@
   * `git config --global user.name "Your Name"`
   
   * `git clone https://github.com/hxse/logseq_note`
+  * `cd logseq_note`
   * `dos2unix "./once logseq_note.sh" "./auto logseq_note.sh"`
   * `sh "./auto logseq_note.sh"`
