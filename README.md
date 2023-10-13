@@ -4,7 +4,7 @@
   * `apt update && apt upgrade`
   * `apt install git`
   * `termux-setup-storage`
-  * `cd ~/storage`
+  * `cd ~/storage/shared`
   * `mkdir logseq_note`
   * `echo "export note_github_token=<your token>" >> ~/.bashrc`
   * `source ~/.bashrc`
