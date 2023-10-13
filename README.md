@@ -1,6 +1,8 @@
 # logseq_note
   * test5
 # termux
+  * `apt update && apt upgrade`
+  * `apt install git`
   * `termux-setup-storage`
   * `cd ~/Storage`
   * `mkdir logseq_note`
