@@ -15,7 +15,7 @@
   * `git config --global user.name "Your Name"`
   
   * `git clone https://github.com/hxse/logseq_note`
-  * `git config --global --add safe.directory "*"`
   * `cd logseq_note`
+  * `git config --global --add safe.directory "*"`
   * `dos2unix "./once logseq_note.sh" "./auto logseq_note.sh"`
   * `bash "./auto logseq_note.sh"`
