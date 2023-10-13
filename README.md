@@ -19,3 +19,7 @@
   * `git config --global --add safe.directory "*"`
   * `dos2unix "./once logseq_note.sh" "./auto logseq_note.sh"`
   * `bash "./auto logseq_note.sh"`
+# logseq的问题
+  * 有两种冲突模式
+    * 1. 一个本地改动上传云端时,和另一个本地改动上传云端时的冲突
+    * 2. 一个本地正在编辑时, 和从云端同步时造成的本地改动, 之间的冲突
