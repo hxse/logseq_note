@@ -1,6 +1,9 @@
 # logseq_note
   * test5
 # termux
+  * `termux-setup-storage`
+  * `cd ~/Storage`
+  * `mkdir logseq_note`
   * `echo "export note_github_token=<your token>" >> ~/.bashrc`
   * `source ~/.bashrc`
   * `git config --global http.proxy http://127.0.0.1:7890`
