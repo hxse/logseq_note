@@ -1,5 +1,5 @@
 # logseq_note
-  * test3
+  * test5
 # termux
   * `echo "export note_github_token=<your token>" >> ~/.bashrc`
   * `source ~/.bashrc`
