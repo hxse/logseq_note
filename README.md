@@ -1,5 +1,5 @@
 # logseq_note
-  * test5
+  * test6
 # termux
   * `apt update && apt upgrade`
   * `apt install git`
