@@ -2,4 +2,11 @@
 
 export LANG="en_US.UTF-8"
 
-bash "./once logseq_note.sh" -a true -s 15
+if [ -z "$1" ]
+then
+    sleep=15
+else
+    sleep=$1
+fi
+
+bash "./once logseq_note.sh" -a true -s $sleep
