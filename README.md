@@ -20,7 +20,7 @@
   * `dos2unix "./once logseq_note.sh" "./auto logseq_note.sh"`
   * `bash "./auto logseq_note.sh"`
   * 一行启动
-    * `yes | termux-setup-storage;cd ~/storage/shared/logseq_note;dos2unix "./once logseq_note.sh" "./auto logseq_note.sh";bash "./auto logseq_note.sh" 20;`
+    * `yes | termux-setup-storage;cd ~/storage/shared/logseq_note;dos2unix "./once logseq_note.sh" "./auto logseq_note.sh";bash "./auto logseq_note.sh" 60;`
 # logseq的问题
   * 有两种冲突模式
     * 1. 手机本地改动上传云端时,和电脑本地改动上传云端时的冲突
