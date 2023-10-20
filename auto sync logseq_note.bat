@@ -1,6 +1,6 @@
 cd %~dp0
 if "%~1" == "" (
-    SET /A sleep = 20
+    SET /A sleep = 180
 ) else (
     SET /A sleep = %1
 )

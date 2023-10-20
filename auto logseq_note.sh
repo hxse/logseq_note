@@ -4,7 +4,7 @@ export LANG="en_US.UTF-8"
 
 if [ -z "$1" ]
 then
-    sleep=15
+    sleep=180
 else
     sleep=$1
 fi
